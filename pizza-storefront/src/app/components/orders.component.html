@@ -1,0 +1,13 @@
+<h4>Orders for {{ email }}</h4>
+
+<div *ngIf="orders">
+
+    <div *ngFor="let order of orders">
+        <p>Order Id: {{ order.orderId }}</p>
+        <p>${{ order.cost | number:'1.2-2' }}</p>
+        <hr>
+    </div>
+
+</div>
+
+<h4><button type="button" [routerLink]="['/']">Back to Ordering</button></h4>
